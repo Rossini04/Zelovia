@@ -2,12 +2,14 @@
 document.addEventListener('DOMContentLoaded', function () {
     const searchBar = document.getElementById('search-bar');
 
-    searchBar.addEventListener('keydown', function (event) {
-        if (event.key === 'Enter') {
-            const query = searchBar.value.trim();
-            window.location.href = "search.html?q=" + encodeURIComponent(query);
-        }
-    });
+    if (searchBar) {
+        searchBar.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                const query = searchBar.value.trim();
+                window.location.href = "Html/search.html?q=" + encodeURIComponent(query);
+            }
+        });
+    }
 
     // Efeito nav transparente/branco fixo
     const nav = document.querySelector('nav');
