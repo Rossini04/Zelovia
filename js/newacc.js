@@ -31,8 +31,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert('As senhas não coincidem!');
                 e.preventDefault();
             } else {
+                e.preventDefault();
                 alert('Conta criada com sucesso!');
-                // window.location.href = 'index.html';
+                window.location.href = '../index.html';
             }
         });
     }
