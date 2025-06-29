@@ -1,0 +1,185 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zelovia - Ofertas</title>
+    <script src="../js/offers.js"></script>
+    <link rel="stylesheet" href="../css/offers.css">
+</head>
+
+<body>
+    <nav>
+        <div id="search-sign-wrapper" class="search-container">
+            <input type="text" id="search-bar" placeholder="Pesquisar...">
+            <button class="search-container-signin" onclick="window.location.href='signin.html'">Sign in</button>
+        </div>
+
+        <div class="nav-content">
+            <a id="title" href="index.html">Zelovia</a>
+            <ul class="nav-ul">
+                <ul class="nav-ul">
+                    <li class="nav-ul-li"><a href="new.html">Novidades</a></li>
+                    <li class="nav-ul-li"><a href="clothing.html">Roupas</a></li>
+                    <li class="nav-ul-li"><a href="brands.html">Marcas</a></li>
+                    <li class="nav-ul-li"><a href="dresses.html">Vestidos</a></li>
+                    <li class="nav-ul-li"><a href="activewear.html">Roupas esportivas</a></li>
+                    <li class="nav-ul-li"><a href="sweatfleece.html">Moletom</a></li>
+                    <li class="nav-ul-li"><a href="acessories.html">Acessórios</a></li>
+                    <li class="nav-ul-li"><a href="offers.html">Ofertas</a></li>
+                </ul>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <img class="banner" src="../img/6.16-Desktop.jpg" alt="Banner Zelovia" style="width:100%;max-width:100%;">
+        <section class="ofertas-header">
+            <h2 class="ofertas-header-h2"> Ofertas Especiais 🔥</h2>
+            <p class="ofertas-header-p">Selecionamos itens exclusivos para você aproveitar com até <strong>50% OFF</strong>.</p>
+        </section>
+
+        <div class="tendencias-row">
+            <div class="tendencias-container">
+                <img src="../img/camu.webp" alt="Jaqueta camuflada">
+                <div class="tendencias-info">
+                    <strong>Jaqueta Tática Camuflada</strong><br>
+                    <span style="text-decoration: line-through; color: #888;">R$ 229,90</span>
+                    <span style="color: #c00; font-weight: bold;"> R$ 159,90</span>
+                </div>
+                <button class="btn-promocao" onclick="verPromocao('camu')">Ver promoção</button>
+            </div>
+
+            <div class="tendencias-container">
+                <img src="../img/cutgurno.webp" alt="Coturno preto">
+                <div class="tendencias-info">
+                    <strong>Coturno Militar Premium</strong><br>
+                    <span style="text-decoration: line-through; color: #888;">R$ 299,90</span>
+                    <span style="color: #c00; font-weight: bold;"> R$ 199,90</span>
+                </div>
+                <button class="btn-promocao" onclick="verPromocao('coturno')">Ver promoção</button>
+            </div>
+
+            <div class="tendencias-container">
+                <img src="../img/cargo.webp" alt="Calça cargo">
+                <div class="tendencias-info">
+                    <strong>Calça Cargo Zelovia</strong><br>
+                    <span style="text-decoration: line-through; color: #888;">R$ 189,90</span>
+                    <span style="color: #c00; font-weight: bold;"> R$ 139,90</span>
+                </div>
+                <button class="btn-promocao" onclick="verPromocao('cargo')">Ver promoção</button>
+            </div>
+
+            <div class="tendencias-container">
+                <img src="../img/aviador.webp" alt="Óculos aviador">
+                <div class="tendencias-info">
+                    <strong>Óculos Aviador</strong><br>
+                    <span style="text-decoration: line-through; color: #888;">R$ 119,90</span>
+                    <span style="color: #c00; font-weight: bold;"> R$ 79,90</span>
+                </div>
+                <button class="btn-promocao" onclick="verPromocao('oculos')">Ver promoção</button>
+            </div>
+        </div>
+
+        <!-- Divisória visual -->
+        <div class="promo-divider-retangulo"></div>
+
+        <!-- Seções detalhadas das promoções, uma embaixo da outra -->
+        <section id="promo-camu" class="promo-detalhe">
+            <h3>Jaqueta Tática Camuflada</h3>
+            <img src="../img/camu.webp" alt="Jaqueta camuflada" class="promo-img">
+            <p>Proteção, estilo e conforto para qualquer missão. Tecido resistente à água, bolsos estratégicos e ajuste perfeito.</p>
+            <div class="promo-preco">
+                <span class="promo-antigo">R$ 229,90</span>
+                <span class="promo-novo">R$ 159,90</span>
+            </div>
+            <form class="promo-form" onsubmit="adicionarCarrinho(event, 'Jaqueta Tática Camuflada')">
+                <input type="text" placeholder="CEP de entrega" required pattern="\d{5}-?\d{3}">
+                <button type="submit" class="btn-comprar">Adicionar ao carrinho</button>
+            </form>
+            <button class="btn-comprar-direto" onclick="comprarDireto('Jaqueta Tática Camuflada')">Comprar agora</button>
+        </section>
+
+        <section id="promo-coturno" class="promo-detalhe">
+            <h3>Coturno Militar Premium</h3>
+            <img src="../img/cutgurno.webp" alt="Coturno preto" class="promo-img">
+            <p>Durabilidade e conforto extremo para qualquer terreno. Solado antiderrapante e design robusto.</p>
+            <div class="promo-preco">
+                <span class="promo-antigo">R$ 299,90</span>
+                <span class="promo-novo">R$ 199,90</span>
+            </div>
+            <form class="promo-form" onsubmit="adicionarCarrinho(event, 'Coturno Militar Premium')">
+                <input type="text" placeholder="CEP de entrega" required pattern="\d{5}-?\d{3}">
+                <button type="submit" class="btn-comprar">Adicionar ao carrinho</button>
+            </form>
+            <button class="btn-comprar-direto" onclick="comprarDireto('Coturno Militar Premium')">Comprar agora</button>
+        </section>
+
+        <section id="promo-cargo" class="promo-detalhe">
+            <h3>Calça Cargo Zelovia</h3>
+            <img src="../img/cargo.webp" alt="Calça cargo" class="promo-img">
+            <p>Versatilidade e estilo urbano. Bolsos amplos e tecido resistente para o dia a dia.</p>
+            <div class="promo-preco">
+                <span class="promo-antigo">R$ 189,90</span>
+                <span class="promo-novo">R$ 139,90</span>
+            </div>
+            <form class="promo-form" onsubmit="adicionarCarrinho(event, 'Calça Cargo Zelovia')">
+                <input type="text" placeholder="CEP de entrega" required pattern="\d{5}-?\d{3}">
+                <button type="submit" class="btn-comprar">Adicionar ao carrinho</button>
+            </form>
+            <button class="btn-comprar-direto" onclick="comprarDireto('Calça Cargo Zelovia')">Comprar agora</button>
+        </section>
+
+        <section id="promo-oculos" class="promo-detalhe">
+            <h3>Óculos Aviador</h3>
+            <img src="../img/aviador.webp" alt="Óculos aviador" class="promo-img">
+            <p>Visual clássico e proteção UV total. Leve, resistente e perfeito para qualquer ocasião.</p>
+            <div class="promo-preco">
+                <span class="promo-antigo">R$ 119,90</span>
+                <span class="promo-novo">R$ 79,90</span>
+            </div>
+            <form class="promo-form" onsubmit="adicionarCarrinho(event, 'Óculos Aviador')">
+                <input type="text" placeholder="CEP de entrega" required pattern="\d{5}-?\d{3}">
+                <button type="submit" class="btn-comprar">Adicionar ao carrinho</button>
+            </form>
+            <button class="btn-comprar-direto" onclick="comprarDireto('Óculos Aviador')">Comprar agora</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Zelovia</h3>
+                <p>Estilo com tática. Elegância com presença.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="clothing.html">Roupas</a></li>
+                    <li><a href="acessories.html">Acessórios</a></li>
+                    <li><a href="brands.html">Marcas</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Atendimento</h4>
+                <ul>
+                    <li><a href="#">Ajuda</a></li>
+                    <li><a href="#">Política de Troca</a></li>
+                    <li><a href="#">Envio & Entrega</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <form id="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="Seu e-mail" required />
+                    <button type="submit">Inscrever-se</button>
+                </form>
+                <p id="newsletter-msg" class="fade-msg"></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Zelovia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

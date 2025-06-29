@@ -1,0 +1,380 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 80px; /* espaço para o nav fixo */
+}
+
+#title {
+    font-family: russian-sans, sans-serif;
+    /* Define a fonte do título */
+    padding: 0;
+    /* Remove o espaçamento interno */
+    margin: 0;
+    /* Remove a margem externa */
+    font-size: 2.5rem;
+    /* Define o tamanho da fonte do título */
+    text-decoration: none;
+    /* Remove o sublinhado do título */
+    color: black;
+}
+
+.nav-ul {
+    list-style: none;
+    /* Remove os marcadores da lista */
+    padding: 0;
+    /* Remove o espaçamento interno */
+    margin: 0;
+    /* Remove a margem externa */
+    display: flex;
+    /* Exibe os itens da lista em linha */
+    justify-content: left;
+    /* Centraliza os itens horizontalmente */
+    gap: 20px;
+    /* Espaçamento entre os itens da lista */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* Define a fonte dos itens da lista */
+}
+
+.nav-ul-li a {
+    text-decoration: none;
+    /* Remove o sublinhado dos links */
+    color: #000;
+    /* Define a cor do texto dos links */
+    font-size: 1.2rem;
+    /* Define o tamanho da fonte dos links */
+}
+
+.nav-ul-li a:hover {
+    text-decoration: underline;
+    /* Remove o sublinhado dos links */
+    color: #000;
+    /* Define a cor do texto dos links */
+    font-size: 1.2rem;
+    /* Define o tamanho da fonte dos links */
+}
+
+.search-container {
+    display: flex;
+    /* Exibe os itens em linha */
+    justify-content: flex-end;
+    /* Alinha à direita */
+    align-items: center;
+    /* Centraliza verticalmente */
+    margin: -20px 30px 0 0;
+    /* Remove o espaço da borda esquerda */
+    gap: 16px;
+    /* Espaço entre o campo e o botão */
+    padding-bottom: 20px;
+    /* Ajuste se quiser espaço abaixo */
+    background: transparent;
+    /* Começa transparente */
+    transition: background 0.3s;
+}
+
+/* Quando o nav estiver com fundo branco, a search também fica */
+nav.nav-scrolled .search-container {
+    background: #fff;
+}
+
+#search-bar {
+    /* Campo de pesquisa */
+    padding: 6px;
+    font-size: 1rem;
+    border: none;
+    /* Remove todas as bordas */
+    border-bottom: 2px solid #414141;
+    /* Adiciona apenas a borda inferior */
+    border-radius: 0;
+    /* Remove o arredondamento */
+    outline: none;
+    /* Remove o contorno ao focar */
+}
+
+.search-container-signin {
+    border: none;
+    /* Remove todas as bordas */
+    background: none;
+    /* Remove fundo */
+    color: #000000;
+    /* Cor do texto */
+    font-size: 1rem;
+    /* Tamanho da fonte */
+    cursor: pointer;
+    /* Cursor de mãozinha */
+    border-radius: 0;
+    /* Remove o arredondamento */
+    outline: none;
+    /* Remove o contorno ao focar */
+    margin-top: 0;
+    /* Alinha com o campo de pesquisa */
+    padding: 6px 12px;
+    /* Espaçamento interno */
+    transition: color 0.2s;
+}
+
+.search-container-signin:hover {
+    color: #000;
+    /* Destaque ao passar o mouse */
+    text-decoration: underline;
+    /* Sublinha ao passar o mouse */
+}
+
+nav {
+    position: fixed;
+    /* Fixa o nav no topo da tela */
+    top: 0;
+    /* Gruda no topo */
+    left: 0;
+    /* Gruda na esquerda */
+    width: 100vw;
+    /* Ocupa toda a largura da tela */
+    background: #fff;
+    /* Fica branco ao rolar */
+    z-index: 1000;
+    /* Fica acima dos outros elementos */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    /* Sombra suave */
+    padding: 24px 0 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    z-index: 9999;
+    /* Garante que o nav fique acima de tudo */
+}
+
+nav.nav-scrolled {
+    background: #fff;
+    /* Fica branco ao rolar */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    /* Sombra suave */
+}
+
+.nav-content {
+    margin-top: -30px;
+    /* Aproxima do topo, mas não sobrepõe a search-container */
+    margin-left: 40px;
+    /* Distancia da esquerda */
+}
+nav:hover {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    /* Opcional: sombra igual ao nav-scrolled */
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* Se quiser que a barra de busca também fique branca ao passar o mouse no nav */
+nav:hover .search-container {
+    background: #fff;
+}
+
+
+.fade-msg {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    font-size: 0.9rem;
+    color: #66ffcc;
+    margin-top: 8px;
+}
+
+.footer {
+  background: #111;
+  color: #f2f2f2;
+  padding: 40px 20px 0 20px;
+  font-family: system-ui, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px;
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #333;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 16px 0;
+  font-size: 0.9rem;
+  background: #0c0c0c;
+  color: #888;
+}
+
+.catalogo-main {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0 0 0;
+    min-height: 70vh;
+    gap: 32px;
+}
+
+.catalogo-sidebar {
+    position: sticky;
+    top: 100px;
+    width: 180px; /* menor */
+    min-height: 300px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 18px 10px;
+    font-size: 1rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    margin-left: 0; /* bem à esquerda */
+}
+
+.catalogo-conteudo {
+    flex: 1;
+    min-width: 0;
+    margin-bottom: 48px; /* Espaço extra antes do footer */
+}
+
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px 18px;
+    margin-top: 24px;
+    justify-items: center;
+}
+
+.catalogo-item img {
+    width: 180px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    background: #f8f8f8;
+    display: block;
+    margin: 0 auto;
+}
+
+.catalogo-item {
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    min-height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    transition:
+        box-shadow 0.15s cubic-bezier(.4,0,.2,1),
+        transform 0.12s cubic-bezier(.4,0,.2,1);
+    width: 200px;
+    position: relative;
+    will-change: transform;    /* Adicione estas duas linhas para permitir JS controlar o transform */
+    pointer-events: auto;
+}
+
+/* Mantém o efeito de destaque ao passar o mouse */
+.catalogo-item.hover-effect {
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    z-index: 2;
+}
+
+.catalogo-item a {
+    text-decoration: none;
+}
+
+.catalogo-info {
+    color: #222;
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 12px 6px 8px 6px;
+}
+
+.catalogo-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 32px 0;
+    min-height: 60px;
+}
+
+.loading-balls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.loading-ball {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #222;
+    opacity: 0.3;
+    animation: loading-balls-anim 1.2s infinite;
+}
+
+.loading-ball:nth-child(2) { animation-delay: 0.2s; }
+.loading-ball:nth-child(3) { animation-delay: 0.4s; }
+.loading-ball:nth-child(4) { animation-delay: 0.6s; }
+.loading-ball:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes loading-balls-anim {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+.loading-text {
+    color: #444;
+    font-size: 1rem;
+    font-family: system-ui, sans-serif;
+    opacity: 0.7;
+}
+
+@media (max-width: 900px) {
+    .catalogo-main { flex-direction: column; }
+    .catalogo-sidebar { width: 100%; margin-bottom: 24px; position: static; }
+    .catalogo-grid { grid-template-columns: 1fr 1fr; }
+    .catalogo-item { width: 100%; }
+    .catalogo-item img { width: 100%; height: 180px; }
+}
+@media (max-width: 600px) {
+    .catalogo-grid { grid-template-columns: 1fr; }
+}

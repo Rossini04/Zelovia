@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zelovia - Busca de Produtos</title>
+    <link rel="stylesheet" href="../css/search.css">
+    <script src="../js/search.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div id="search-sign-wrapper" class="search-container">
+            <input type="text" id="search-bar" placeholder="Pesquisar...">
+            <button class="search-container-signin" onclick="window.location.href='signin.html'">Sign in</button>
+        </div>
+
+        <div class="nav-content">
+            <a id="title" href="index.html">Zelovia</a>
+            <ul class="nav-ul">
+                <ul class="nav-ul">
+                    <li class="nav-ul-li"><a href="new.html">Novidades</a></li>
+                    <li class="nav-ul-li"><a href="clothing.html">Roupas</a></li>
+                    <li class="nav-ul-li"><a href="brands.html">Marcas</a></li>
+                    <li class="nav-ul-li"><a href="dresses.html">Vestidos</a></li>
+                    <li class="nav-ul-li"><a href="activewear.html">Roupas esportivas</a></li>
+                    <li class="nav-ul-li"><a href="sweatfleece.html">Moletom</a></li>
+                    <li class="nav-ul-li"><a href="acessories.html">Acessórios</a></li>
+                    <li class="nav-ul-li"><a href="offers.html">Ofertas</a></li>
+                </ul>
+            </ul>
+        </div>
+    </nav>
+    <main class="catalogo-main">
+        <aside class="catalogo-sidebar">
+            <h3>Filtros</h3>
+            <form>
+                <label><input type="checkbox" name="categoria" value="masculino"> Masculino</label><br>
+                <label><input type="checkbox" name="categoria" value="feminino"> Feminino</label><br>
+                <label><input type="checkbox" name="categoria" value="acessorios"> Acessórios</label><br>
+                <label><input type="checkbox" name="categoria" value="ofertas"> Ofertas</label><br>
+                <label><input type="checkbox" name="categoria" value="calçados"> Calçados</label><br>
+                <label><input type="checkbox" name="categoria" value="casual"> Casual</label><br>
+                <label><input type="checkbox" name="categoria" value="esportivo"> Esportivo</label><br>
+                <label><input type="checkbox" name="categoria" value="inverno"> Inverno</label><br>
+                <hr>
+                <label>Preço:<br>
+                    <input type="number" placeholder="Mín" style="width:60px;"> -
+                    <input type="number" placeholder="Máx" style="width:60px;">
+                </label>
+                <hr>
+                <label><input type="checkbox" name="disponivel" value="estoque"> Em estoque</label><br>
+                <label><input type="checkbox" name="disponivel" value="lancamento"> Lançamento</label><br>
+                <label><input type="checkbox" name="disponivel" value="fretegratis"> Frete grátis</label>
+                <br><br>
+                <button type="submit">Filtrar</button>
+            </form>
+        </aside>
+        <section class="catalogo-conteudo">
+            <h2>Catálogo de Produtos</h2>
+            <div class="catalogo-grid">
+                <div class="catalogo-item">
+                    <a href="link1.html">
+                        <img src="../img/Linen.jpg" alt="Vestido branco midi com cinto largo, ideal para looks elegantes e sofisticados de verão.">
+                        <div class="catalogo-info">
+                            Vestido branco midi com cinto largo
+                        </div>
+                    </a>
+                </div>
+                <div class="catalogo-item">
+                    <a href="link2.html">
+                        <img src="../img/1316559.1.webp" alt="Sapatilha feminina de camurça marrom, estilo clássico e minimalista, com solado raso e bico fino.">
+                        <div class="catalogo-info">
+                            Sapatilha feminina de camurça marrom
+                        </div>
+                    </a>
+                </div>
+                <div class="catalogo-item">
+                    <a href="link3.html">
+                        <img src="../img/s25_a03_123231_1274_on_a.avif" alt="Mulher usando conjunto esportivo preto com blusa oversized e bermuda ciclista, combinando com sapatilhas pretas e óculos escuros.">
+                        <div class="catalogo-info">
+                            conjunto esportivo preto
+                        </div>
+                    </a>
+                </div>
+                <div class="catalogo-item">
+                    <a href="link4.html">
+                        <img src="../img/health-skin-care-beauty-smile-600w-2480511543.webp" alt="Mãos femininas aplicando hidratante branco sobre a pele, em ambiente iluminado e suave.">
+                        <div class="catalogo-info">
+                            Hidrante branco delicado
+                        </div>
+                    </a>
+                </div>
+                <div class="catalogo-item">
+                    <a href="produto1.html">
+                        <img src="../img/shopping.webp" alt="Camisa social slim fit em algodão egípcio, ideal para ocasiões formais e looks modernos.">
+                        <div class="catalogo-info">
+                            Camisa social slim fit em algodão egípcio
+                        </div>
+                    </a>
+                </div>
+                <div class="catalogo-item">
+                    <a href="produto2.html">
+                        <img src="../img/transferir.jpeg" alt="Calça jeans reta azul escuro, confortável e versátil para o dia a dia.">
+                        <div class="catalogo-info">
+                            Calça jeans reta azul escuro
+                        </div>
+                    </a>
+                </div>
+                <div class="catalogo-item">
+                    <a href="produto3.html">
+                        <img src="../img/transferir (1).jpeg" alt="Tênis casual branco, design minimalista e fácil de combinar com qualquer look.">
+                        <div class="catalogo-info">
+                            Tênis casual branco
+                        </div>
+                    </a>
+                </div>
+                <div class="catalogo-item">
+                    <a href="produto4.html">
+                        <img src="../img/transferir.webp" alt="Jaqueta bomber preta, perfeita para meia estação e looks urbanos.">
+                        <div class="catalogo-info">
+                            Jaqueta bomber preta
+                        </div>
+                    </a>
+                </div>
+                <div class="catalogo-item">
+                    <a href="produto5.html">
+                        <img src="../img/shopping (1).webp" alt="Camiseta básica gola careca, 100% algodão, disponível em várias cores.">
+                        <div class="catalogo-info">
+                            Camiseta básica gola careca
+                        </div>
+                    </a>
+                </div>
+                <div class="catalogo-item">
+                    <a href="produto6.html">
+                        <img src="../img/shopping (2).webp" alt="Relógio esportivo à prova d'água, resistente e estiloso para o dia a dia.">
+                        <div class="catalogo-info">
+                            Relógio esportivo à prova d'água
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- As bolas de carregamento ficam aqui, centralizadas e separadas do catálogo e do footer -->
+    <div class="catalogo-loading">
+        <div class="loading-balls">
+            <span class="loading-ball"></span>
+            <span class="loading-ball"></span>
+            <span class="loading-ball"></span>
+            <span class="loading-ball"></span>
+            <span class="loading-ball"></span>
+        </div>
+        <span class="loading-text">Carregando mais itens...</span>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Zelovia</h3>
+                <p>Estilo com tática. Elegância com presença.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="clothing.html">Roupas</a></li>
+                    <li><a href="acessories.html">Acessórios</a></li>
+                    <li><a href="brands.html">Marcas</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Atendimento</h4>
+                <ul>
+                    <li><a href="#">Ajuda</a></li>
+                    <li><a href="#">Política de Troca</a></li>
+                    <li><a href="#">Envio & Entrega</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <form id="newsletter-form">
+                    <input type="email" id="newsletter-email" placeholder="Seu e-mail" required />
+                    <button type="submit">Inscrever-se</button>
+                </form>
+                <p id="newsletter-msg" class="fade-msg"></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Zelovia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
